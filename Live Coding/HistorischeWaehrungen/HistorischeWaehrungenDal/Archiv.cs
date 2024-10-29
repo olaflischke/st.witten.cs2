@@ -27,17 +27,19 @@ namespace HistorischeWaehrungenDal
             XDocument xmlDokument = XDocument.Load(url);
 
             var q = xmlDokument.Root.Descendants()
-                                    .Where(xe => xe.Name == "Cube" && xe.Attributes().Count() == 1);
+                                    .Where(xe => xe.Name == "Cube" && xe.Attributes().Count() == 1)
+                                    // Projektion
+                                    .Select(xe => new Handelstag(xe));
 
-            List<Handelstag> tage = new List<Handelstag>();
+            //List<Handelstag> tage = new List<Handelstag>();
 
-            foreach (XElement xe in q)
-            {
-                Handelstag tag = new Handelstag() { Datum = Convert.ToDateTime(xe.Attribute("time").Value) };
-                tage.Add(tag);
-            }
+            //foreach (XElement xe in q)
+            //{
+            //    Handelstag tag = new Handelstag() { Datum = Convert.ToDateTime(xe.Attribute("time").Value) };
+            //    tage.Add(tag);
+            //}
 
-            return tage;
+            return q.ToList();
         }
 
         /// <summary>

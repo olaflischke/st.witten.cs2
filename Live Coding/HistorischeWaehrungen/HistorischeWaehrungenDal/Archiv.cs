@@ -1,4 +1,6 @@
 ﻿
+//using System.Xml.Linq;
+
 using System.Xml.Linq;
 
 namespace HistorischeWaehrungenDal
@@ -27,9 +29,17 @@ namespace HistorischeWaehrungenDal
             XDocument xmlDokument = XDocument.Load(url);
 
             var q = xmlDokument.Root.Descendants()
-                                    .Where(xe => xe.Name == "Cube" && xe.Attributes().Count() == 1)
+                                    .Where(xe => xe.Name.LocalName == "Cube" && xe.Attributes().Count() == 1)
                                     // Projektion
                                     .Select(xe => new Handelstag(xe));
+
+            //var q = xmlDokument.Root.Descendants()
+            //            .Where(xe => GetXElementByName(xe, "Cube", 1))
+            //            // Projektion
+            //            .Select(xe => new Handelstag(xe));
+
+
+
 
             //List<Handelstag> tage = new List<Handelstag>();
 
@@ -41,6 +51,16 @@ namespace HistorischeWaehrungenDal
 
             return q.ToList();
         }
+
+        //bool GetXElementByName(XElement xe, string name, int attributeCount)
+
+        //{
+        //    if (xe.Name == name && xe.Attributes().Count() == attributeCount)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
         /// <summary>
         /// Die Handelstage, die von dieser Archiv-Instanz verwaltet werden

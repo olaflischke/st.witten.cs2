@@ -3,18 +3,19 @@
     public class Ei
     {
         // Konstruktor für ein Ei
-        public Ei()
+        public Ei(Gefluegel mutter)
         {
+            this.Mutter = mutter;
             
             // Ersetzt durch Auto-Property Initializer
             //this.Legedatum = DateTime.Now;
 
             // Instannziiert einen Zufallsgenerator
-            Random random    = new Random();
+            Random random = new Random();
 
             // _gewicht = 42;
             this.Gewicht = random.Next(45, 81);
-            this.Farbe = EiFarbe.Gruen;
+            this.Farbe = (EiFarbe)random.Next(3); // Direct-Cast - kann Exception auslösen, wenn Cast fehlschlägt
         }
 
         // Öffentliches Feld
@@ -56,6 +57,10 @@
         // Auto-Property
         // Property mit automatisch (durch den Compiler) erzeugtem Backing Field
         public DateTime Legedatum { get; set; } = DateTime.Now; // Auto-Property Initializer (ausgeführt vor(!) Konstruktor)
+        /// <summary>
+        /// Tier, das dieses Ei gelegt hat
+        /// </summary>
+        public Gefluegel Mutter { get; set; }
     }
 
     public enum EiFarbe

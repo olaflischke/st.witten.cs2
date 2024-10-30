@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿using System.Globalization;
+using System.Xml.Linq;
 
 namespace HistorischeWaehrungenDal
 {
@@ -8,8 +9,17 @@ namespace HistorischeWaehrungenDal
         {
             this.Datum = Convert.ToDateTime(handelstagNode.Attribute("time").Value);
 
-            // var q = ...
-            // this.Waehrungen = q.Tolist()
+            NumberFormatInfo nfiEzb = new NumberFormatInfo() { NumberDecimalSeparator = "." };
+
+            var q = handelstagNode.Elements().Select(el => new Waehrung() 
+                                                {
+                                                    IsoCode = el.Attribute("currency").Value,
+                                                    EuroKurs = Convert.ToDouble(el.Attribute("rate").Value,NumberFormatInfo.InvariantInfo)
+                                                });
+
+            Waehrung w = new Waehrung();
+
+            this.Waehrungen = q.ToList();
         }
 
         public List<Waehrung> Waehrungen { get; set; }

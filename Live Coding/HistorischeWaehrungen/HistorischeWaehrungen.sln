@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistorischeWaehrungenDal", "HistorischeWaehrungenDal\HistorischeWaehrungenDal.csproj", "{E150CA67-793C-4AB5-81A8-74A30B6BA9B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HistorischeWaehrungenDal", "HistorischeWaehrungenDal\HistorischeWaehrungenDal.csproj", "{E150CA67-793C-4AB5-81A8-74A30B6BA9B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaehrungsDalUnitTests", "WaehrungsDalUnitTests\WaehrungsDalUnitTests.csproj", "{C630C213-BE0E-45D7-8962-D1ACF899D026}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E150CA67-793C-4AB5-81A8-74A30B6BA9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E150CA67-793C-4AB5-81A8-74A30B6BA9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E150CA67-793C-4AB5-81A8-74A30B6BA9B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C630C213-BE0E-45D7-8962-D1ACF899D026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C630C213-BE0E-45D7-8962-D1ACF899D026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C630C213-BE0E-45D7-8962-D1ACF899D026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C630C213-BE0E-45D7-8962-D1ACF899D026}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

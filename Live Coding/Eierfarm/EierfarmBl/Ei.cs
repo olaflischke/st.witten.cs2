@@ -3,7 +3,7 @@
     public class Ei
     {
         // Konstruktor für ein Ei
-        public Ei(Gefluegel mutter)
+        public Ei(IEiLeger mutter)
         {
             this.Mutter = mutter;
             
@@ -60,7 +60,7 @@
         /// <summary>
         /// Tier, das dieses Ei gelegt hat
         /// </summary>
-        public Gefluegel Mutter { get; set; }
+        public IEiLeger Mutter { get; set; }
     }
 
     public enum EiFarbe

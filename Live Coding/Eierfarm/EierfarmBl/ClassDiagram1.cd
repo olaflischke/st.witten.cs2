@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="EierfarmBl.Ei">
-    <Position X="9.5" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAgAAAABAAAAAAEBAAAAAg=</HashCode>
-      <FileName>Ei.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="EierfarmBl.Huhn" BaseTypeListCollapsed="true">
     <Position X="1.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
@@ -15,26 +8,41 @@
     </TypeIdentifier>
   </Class>
   <Class Name="EierfarmBl.Gans">
-    <Position X="7.75" Y="0.75" Width="1.5" />
+    <Position X="6.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAEAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Gans.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="EierfarmBl.Gefluegel">
-    <Position X="4.75" Y="0.75" Width="1.5" />
+  <Class Name="EierfarmBl.Vogel">
+    <Position X="3.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAAAIAAAQAAAIAAAAAQAgAAEAABAAAAEAAAABAA=</HashCode>
+      <HashCode>AEAAAAEAIAAAQAAAIAAAAAQAgAAEAABAAAAEAAAAAAA=</HashCode>
       <FileName>Gefluegel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Enum Name="EierfarmBl.EiFarbe">
-    <Position X="7.5" Y="2.25" Width="1.5" />
+  <Class Name="EierfarmBl.Schnabeltier">
+    <Position X="9" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgAAAAAACAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>Ei.cs</FileName>
+      <HashCode>AEAAEAAAAAAAQAAAAAAAAAAAAAAAAABAAAAEAAAAAAA=</HashCode>
+      <FileName>Schnabeltier.cs</FileName>
     </TypeIdentifier>
-  </Enum>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EierfarmBl.Saeugetier">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Saeugetier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="EierfarmBl.IEiLeger">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAEAAAAAAA=</HashCode>
+      <FileName>IEiLeger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

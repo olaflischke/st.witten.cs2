@@ -38,9 +38,6 @@ namespace HistorischeWaehrungenDal
             //            // Projektion
             //            .Select(xe => new Handelstag(xe));
 
-
-
-
             //List<Handelstag> tage = new List<Handelstag>();
 
             //foreach (XElement xe in q)
